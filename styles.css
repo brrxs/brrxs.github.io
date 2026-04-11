@@ -1242,6 +1242,195 @@ html {
     }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   Project Detail Page
+   ═══════════════════════════════════════════════════════════ */
+
+/* Back navigation */
+.project-back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-global-text);
+    opacity: 0.55;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.project-back-link:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+/* Project title block */
+.project-detail-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.project-detail-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.6rem 0;
+    color: var(--color-global-text);
+}
+
+.project-meta {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.project-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+/* Blog-style content sections */
+.project-section {
+    margin-bottom: 2.5rem;
+}
+
+.project-section h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-global-text);
+    opacity: 0.7;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.65rem;
+    margin: 0 0 1rem 0;
+}
+
+.project-section p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-global-text);
+    margin: 0 0 0.85rem 0;
+}
+
+.project-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Inline code within prose */
+.project-section code {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.82rem;
+    background: color-mix(in srgb, var(--color-border) 50%, transparent);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+}
+
+/* Code block */
+.project-code-block {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    margin: 1rem 0 0 0;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--color-global-text);
+}
+
+.project-code-block code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+
+/* Notebook embed */
+.notebook-embed {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+    background: var(--color-card-bg);
+}
+
+.notebook-embed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.9rem;
+    background: color-mix(in srgb, var(--color-border) 40%, transparent);
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-global-text);
+    opacity: 0.8;
+}
+
+.notebook-open-link {
+    font-size: 0.78rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.notebook-open-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.notebook-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+    background: #fff;
+}
+
+/* Placeholder shown when iframe src is not yet set */
+.notebook-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    height: 200px;
+    font-size: 0.82rem;
+    color: var(--color-global-text);
+    opacity: 0.45;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Action link row at bottom of page */
+.project-action-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    .project-detail-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .notebook-frame {
+        height: 420px;
+    }
+}
+
 /* Confetti-like sparkles */
 .party-sparkle {
     position: fixed;

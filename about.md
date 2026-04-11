@@ -1,5 +1,5 @@
 <div class="about-header">
-  <img src="assets/profile.jpg" alt="Portrait of Tomás Barrientos" class="about-avatar" width="160" height="160" loading="lazy" />
+  <img src="assets/icon.svg" alt="Portrait of Tomás Barrientos" class="about-avatar" width="160" height="160" loading="lazy" />
   <div class="about-header-content">
     <h1 class="title">Hi, I'm Tomás!</h1>
     <div class="about-socials" style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;margin-top:0.5rem;">
