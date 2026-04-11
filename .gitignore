@@ -1,0 +1,19 @@
+# Old files from initial build (pre-template)
+css/
+js/
+projects.html
+resume.html
+publications.md
+
+# Leftover template assets (J Rosser)
+assets/AgentBreederDiagramJPG.jpg
+assets/infusion_big_figure.jpg
+assets/mapping_faithful.jpg
+assets/stream_jpg.jpg
+assets/screenshot.png
+assets/transformerlens_preview-1.png
+assets/TransformerLens___PyTorch_Quick_Reference.*
+assets/pyproject.toml
+
+# GitHub Pages custom domain (not needed for username.github.io)
+CNAME
