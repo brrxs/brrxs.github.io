@@ -129,23 +129,9 @@ df["date"] = pd.to_datetime(df["date"])
 weekly = df.resample("W", on="date")["mentions"].sum()</code></pre>
         </div>
 
-        <!-- Results -->
-        <div class="project-section">
-            <h2>Results</h2>
-            <p>
-                Present the main findings here. What did the analysis show? Highlight 2–3 key results
-                in plain language. If there are figures or tables, they can go here as
-                <code>&lt;img&gt;</code> tags or embedded SVGs once the project is real.
-            </p>
-            <p>
-                A second paragraph can discuss what the findings mean in context — interpretation,
-                limitations, and what would be worth investigating next.
-            </p>
-        </div>
-
         <!-- Analysis Notebook -->
         <div class="project-section">
-            <h2>Analysis Notebook</h2>
+            <h2>Notebook</h2>
             <p>
                 The full analysis — code, outputs, and commentary — is available in the notebook below.
                 Replace the <code>src</code> attribute on the iframe with the nbviewer URL for your
@@ -179,6 +165,20 @@ weekly = df.resample("W", on="date")["mentions"].sum()</code></pre>
                 ></iframe>
                 -->
             </div>
+        </div>
+
+        <!-- Results -->
+        <div class="project-section">
+            <h2>Results</h2>
+            <p>
+                Present the main findings here. What did the analysis show? Highlight 2–3 key results
+                in plain language. If there are figures or tables, they can go here as
+                <code>&lt;img&gt;</code> tags or embedded SVGs once the project is real.
+            </p>
+            <p>
+                A second paragraph can discuss what the findings mean in context — interpretation,
+                limitations, and what would be worth investigating next.
+            </p>
         </div>
 
         <!-- Action links -->
