@@ -80,7 +80,7 @@
         <!-- Project header -->
         <div class="project-detail-header">
             <h1>Test 01 — Layout Prototype</h1>
-            <div class="project-meta">Prototype · Applied Research · 2025</div>
+            <div class="project-meta">Data Cleaning · Applied Research · 2026</div>
             <div class="project-detail-tags">
                 <span class="tag tag-theme">Python</span>
                 <span class="tag tag-theme">NLP</span>
@@ -92,10 +92,7 @@
         <div class="project-section">
             <h2>Overview</h2>
             <p>
-                This is a placeholder overview for the Test 01 prototype. Replace this paragraph with
-                the project abstract — a concise 2–4 sentence summary of what the project is, why it
-                matters, and what the main finding or contribution is. Write it for a reader who has
-                30 seconds.
+                This project explores r/Paranormal, a Reddit community centered on first-person reports of anomalous and paranormal activity. The core of this work is the cleaning and processing of raw scraped data into a structured, analysis-ready corpus using spaCy's en_core_web_lg model for lemmatization and linguistic preprocessing.
             </p>
         </div>
 
@@ -103,13 +100,7 @@
         <div class="project-section">
             <h2>Context</h2>
             <p>
-                Background and motivation go here. What problem or question prompted this work? What
-                prior work, data sources, or institutional context is the reader missing? This section
-                gives the reader enough grounding to understand the analytical choices that follow.
-            </p>
-            <p>
-                A second paragraph can describe the data source, the time period covered, or the
-                specific research question being addressed.
+                The subreddit was chosen for its density of self-authored experiential narratives — accounts of haunting, entity contact, and unexplained phenomena written in lay language. The thematic framing draws from Mark Fisher's <em>The Weird and the Eerie</em> (2016), which theorizes two distinct phenomenological registers of the uncanny, and which motivates the analytical questions that the cleaned corpus will be used to investigate in later stages.
             </p>
         </div>
 
@@ -117,16 +108,8 @@
         <div class="project-section">
             <h2>Methods</h2>
             <p>
-                Describe the analytical approach. What statistical or computational methods were used?
-                Why were those methods chosen over alternatives? Keep this readable — save the
-                technical depth for the notebook.
+                Raw scraped data was cleaned by stripping Markdown, URLs, and Reddit-specific markup. Cleaned text was then lemmatized using spaCy, reducing tokens to their base dictionary forms and removing stopwords and punctuation. Posts below a five-token threshold were filtered out as uninformative. The resulting dataset was written to a parquet file as a fixed-schema artifact consumed by all subsequent notebooks in the pipeline.
             </p>
-            <pre class="project-code-block"><code># Example code snippet — replace with a key step from the actual analysis
-import pandas as pd
-
-df = pd.read_csv("data/raw.csv")
-df["date"] = pd.to_datetime(df["date"])
-weekly = df.resample("W", on="date")["mentions"].sum()</code></pre>
         </div>
 
         <!-- Analysis Notebook -->
@@ -156,13 +139,7 @@ weekly = df.resample("W", on="date")["mentions"].sum()</code></pre>
         <div class="project-section">
             <h2>Results</h2>
             <p>
-                Present the main findings here. What did the analysis show? Highlight 2–3 key results
-                in plain language. If there are figures or tables, they can go here as
-                <code>&lt;img&gt;</code> tags or embedded SVGs once the project is real.
-            </p>
-            <p>
-                A second paragraph can discuss what the findings mean in context — interpretation,
-                limitations, and what would be worth investigating next.
+                The cleaning process reduced the raw corpus from 105,755 rows to 63,305 posts — a roughly 40 percent reduction driven by isolating post-level records, dropping deleted or empty submissions, and applying the token filter. The final artifact is approximately 49 MB and retains text at three levels of processing (raw, clean, and lemmatized) alongside temporal metadata and community flair tags.
             </p>
         </div>
 
