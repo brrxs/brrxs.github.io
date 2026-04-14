@@ -1,0 +1,36 @@
+<svg width="100%" viewBox="0 0 680 480" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>TB logo rust palette</title>
+<desc>3D logo using amber-orange, rust and dark rust</desc>
+<defs>
+  <style>
+    .shadow  { fill: rgba(80,28,8,0.18) }
+    .top     { fill: #E07C38 }
+    .front   { fill: #BF5018 }
+    .side    { fill: #7A3010 }
+  </style>
+</defs>
+
+
+<!-- T: stem first, crossbar paints over it -->
+<polygon class="top"   points="194,176 246,176 264,162 212,162"/>
+<rect    class="front" x="194" y="176" width="52" height="186"/>
+<polygon class="side"  points="246,176 264,162 264,362 246,362"/>
+
+<polygon class="top"   points="100,122 340,122 358,108 118,108"/>
+<rect    class="front" x="100" y="122" width="240" height="54"/>
+<polygon class="side"  points="340,122 358,108 358,172 340,176"/>
+
+<!-- B -->
+<polygon class="top"   points="396,122 448,122 466,108 414,108"/>
+<rect    class="front" x="345" y="122" width="52" height="240"/> 
+<polygon class="side"  points="448,122 466,108 466,362 448,362"/>
+
+<path class="front" d="M 448 122 L 530 122 Q 572 122 572 187 Q 572 252 530 252 L 448 252 Z"/>
+<path class="side"  d="M 530 122 L 548 108 Q 590 108 590 173 Q 590 240 548 240 L 530 252 Q 572 252 572 187 Q 572 122 530 122 Z"/>
+<polygon class="top" points="448,122 530,122 548,108 466,108"/>
+
+<path class="front" d="M 448 252 L 540 252 Q 590 252 590 314 Q 590 362 540 362 L 448 362 Z"/>
+<path class="side"  d="M 540 252 L 558 238 Q 608 238 608 302 Q 608 362 558 362 L 540 362 Q 590 362 590 314 Q 590 252 540 252 Z"/>
+<polygon class="top" points="448,252 540,252 558,238 466,238"/>
+
+</svg>
