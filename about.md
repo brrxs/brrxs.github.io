@@ -25,8 +25,8 @@
   </div>
 </div>
 
-I'm a **Sociologist and Data Analyst** based in Santiago, Chile. I hold an **M.A. in Sociology from Pontificia Universidad Católica de Chile** (graduated with highest distinction), where my thesis examined *Civic Engagement Trajectories in Santiago de Chile* using a life-course perspective and optimal matching techniques.
+I am a sociologist based in Santiago, Chile, working in data analysis and applied research. I hold an M.A. in Sociology from the Pontificia Universidad Católica de Chile.
 
-My research sits at the intersection of **computational social science, survey methodology, and quantitative sociology**. I specialize in sequence analysis, Latent Class Analysis, multilevel and causal inference models, and large-scale digital trace data analysis — primarily in **R**, **Python**, and **Stata**.
+My methodological training is in longitudinal methodologies, Structural Equation Modelling (SEM), multilevel and causal inference models, and the analysis of large scale digital trace data, and I work primarily in R, Python, and Stata. Recent projects span survey methodology and composite indicator construction, mixed method market studies, and multi platform digital trace data pipelines. I am currently extending this toolkit toward natural language processing methods within a social sciences framework.
 
 
