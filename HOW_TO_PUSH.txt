@@ -1,0 +1,60 @@
+HOW TO UPDATE YOUR GITHUB PAGE
+===============================
+
+Every time you edit a file and want the changes to go live:
+
+1. Open a terminal in this folder (Github/)
+   - In VS Code: right-click the folder -> "Open in Integrated Terminal"
+
+2. Stage the file(s) you changed:
+   git add <filename>
+
+   Example:
+   git add projects.md
+   git add about.md resume.md        (multiple files at once)
+
+3. Commit with a short message describing what you changed:
+   git commit -m "your message here"
+
+   Example:
+   git commit -m "add new project card"
+
+4. Push to GitHub:
+   git push
+
+   The site updates at https://brrxs.github.io within ~1 minute.
+
+
+QUICK REFERENCE
+---------------
+
+See what files you changed:
+   git status
+
+See the history of past commits:
+   git log --oneline
+
+
+COMMON EDITS AND WHICH FILE TO TOUCH
+--------------------------------------
+
+Update bio / social links    ->  about.md
+Update CV / experience       ->  resume.md
+Add or edit a project card   ->  projects.md
+Change colors / layout       ->  styles.css
+Change page structure        ->  index.html
+
+When adding a new project card, remember to:
+  - Add data-tags="r lca ..." to the <div class="publication-card"> line
+  - Add the matching <span class="tag tag-theme" data-tag="..."> tags inside
+  - If it's a new method/topic, add a filter button to the filter bar in projects.md
+
+
+UPDATING NOTEBOOK / DATA / GITHUB LINKS
+-----------------------------------------
+
+In projects.md, replace the href="#" placeholders with real URLs:
+
+  NOTEBOOK -> https://nbviewer.org/github/brrxs/<repo>/blob/main/<notebook>.ipynb
+  DATA     -> link to your GitHub repo, OSF, or Dataverse
+  GITHUB   -> https://github.com/brrxs/<repo>
