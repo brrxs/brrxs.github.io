@@ -12,7 +12,7 @@
   <button class="filter-btn" data-filter="digital-trace">Digital Trace</button>
 </div>
 
-## 2025
+## 2026
 
 <div class="publication-card" data-tags="python nlp digital-trace">
   <div class="publication-content">
