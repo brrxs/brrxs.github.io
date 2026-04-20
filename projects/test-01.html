@@ -90,7 +90,7 @@
         <div class="project-section">
             <h2>Overview</h2>
             <p>
-                This project explores r/Paranormal, a Reddit community centered on first-person reports of anomalous and paranormal activity. The core of this work is the cleaning and processing of raw scraped data into a structured, analysis-ready corpus using spaCy's en_core_web_lg model for lemmatization and linguistic preprocessing.
+                This notebook is the full data preparation pipeline for the r/Paranormal project. It loads 105,755 raw scraped rows, cleans Reddit-specific markup, removes AutoModerator content, lemmatizes using spaCy's <code>en_core_web_lg</code> model, constructs temporal features, applies an archive coverage cutoff, and writes the processed dataset to a parquet file that all subsequent notebooks draw from.
             </p>
         </div>
 
@@ -98,7 +98,7 @@
         <div class="project-section">
             <h2>Context</h2>
             <p>
-                The subreddit was chosen for its density of self-authored experiential narratives — accounts of haunting, entity contact, and unexplained phenomena written in lay language. The thematic framing draws from Mark Fisher's <em>The Weird and the Eerie</em> (2016), which theorizes two distinct phenomenological registers of the uncanny, and which motivates the analytical questions that the cleaned corpus will be used to investigate in later stages.
+                The subreddit was chosen for its density of self-authored experiential narratives: accounts of haunting, entity contact, and unexplained phenomena written in lay language. The data was collected through Pullpush.io, a Reddit archive, and covers the period from January to May 2025. The thematic framing draws from Mark Fisher's <em>The Weird and the Eerie</em> (2016), which theorizes two distinct phenomenological registers of the uncanny, and which motivates the analytical questions the corpus will be used to investigate in later stages.
             </p>
         </div>
 
@@ -106,7 +106,7 @@
         <div class="project-section">
             <h2>Methods</h2>
             <p>
-                Raw scraped data was cleaned by stripping Markdown, URLs, and Reddit-specific markup. Cleaned text was then lemmatized using spaCy, reducing tokens to their base dictionary forms and removing stopwords and punctuation. Posts below a five-token threshold were filtered out as uninformative. The resulting dataset was written to a parquet file as a fixed-schema artifact consumed by all subsequent notebooks in the pipeline.
+                The pipeline proceeds in seven steps. Raw text is first cleaned by stripping Markdown, URLs, and Reddit markup, removing 6,688 empty or deleted posts and leaving 99,067 rows. AutoModerator posts are then filtered out, a further 9,003 rows, leaving 90,064. Lemmatization is performed with spaCy, retaining only nouns, verbs, adjectives, and adverbs, and applying a ten-token minimum floor; 45,112 short posts are removed, leaving 44,952 with a median of 24 tokens. Temporal features are derived from the <code>created_utc</code> field, including a zero-based day index used as a covariate in the temporal analysis notebook. Finally, an empirical coverage cutoff is applied: the 7-day rolling mean of daily posts is compared against a baseline of 329 posts per day established over the first 90 days, and the series is truncated at May 10 2025, the point where posting activity drops below the archive coverage threshold.
             </p>
         </div>
 
@@ -114,7 +114,7 @@
         <div class="project-section">
             <h2>Notebook</h2>
             <p>
-                The full analysis — code, outputs, and commentary — is available in the notebook below.
+                The full analysis, including code, outputs, and commentary, is available in the notebook below.
             </p>
 
             <div class="notebook-embed">
@@ -137,7 +137,7 @@
         <div class="project-section">
             <h2>Results</h2>
             <p>
-                The cleaning process reduced the raw corpus dropping deleted or empty submissions, and applying the token filter. The final artifact is approximately 49 MB and retains text at three levels of processing (raw, clean, and lemmatized) alongside temporal metadata. This structured dataset serves as the foundation for all subsequent analyses, enabling reproducibility and consistency across the project pipeline.
+                The pipeline reduces the raw corpus from 105,755 rows to 43,185 posts spanning January 1 to May 10, 2025. The final artifact is approximately 44.6 MB and retains text at three levels of processing: raw, clean, and lemmatized, alongside temporal metadata. This structured dataset is the single source of data for all subsequent analyses in the project pipeline.
             </p>
         </div>
 
