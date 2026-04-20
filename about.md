@@ -25,8 +25,11 @@
   </div>
 </div>
 
-I am a sociologist based in Santiago, Chile, working in data analysis and applied research. I hold an M.A. in Sociology from the Pontificia Universidad Católica de Chile.
+I am a sociologist based in Santiago, Chile, working in data analysis and applied social research. I hold an M.A. in Sociology from the Pontificia Universidad Católica de Chile, where I graduated with highest distinction.
 
-My methodological training is in longitudinal methodologies, Structural Equation Modelling (SEM), multilevel and causal inference models, and the analysis of large scale digital trace data, and I work primarily in R, Python, and Stata. Recent projects span survey methodology and composite indicator construction, mixed method market studies, and multi platform digital trace data pipelines. I am currently extending this toolkit toward natural language processing methods within a social sciences framework.
+My methodological training centers on longitudinal methods, structural equation modeling, multilevel and causal inference models, and the analysis of large-scale digital trace data, with primary work in R and Python. Recent projects have included survey methodology and composite indicator construction, mixed-method market studies, and multi-platform digital trace data pipelines.
+
+I am currently extending this work toward natural language processing methods applied within a social sciences framework.
+This website collects ongoing and completed projects. If something here catches your attention, I would love to hear from you.
 
 
