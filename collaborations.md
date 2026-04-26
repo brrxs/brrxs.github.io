@@ -18,6 +18,7 @@
       <div class="project-links">
         <a href="https://www.monitorsocial.cl/debate" class="tag tag-github" target="_blank" rel="noopener">VIEW</a>
         <a href="https://www.latercera.com/nacional/noticia/edad-estatura-o-de-que-partido-es-las-busquedas-en-google-sobre-los-candidatos-durante-el-debate-y-quien-domino-en-rrss/" class="tag tag-notebook" target="_blank" rel="noopener">PRESS</a>
+        <a href="https://www.ciperchile.cl/2025/09/05/candidatos-presidenciales-en-la-maquina-de-atencion-digital-cuanto-interes-estan-generando-en-internet/" class="tag tag-data" target="_blank" rel="noopener">COLUMN</a>
       </div>
     </div>
   </div>
