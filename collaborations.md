@@ -1,8 +1,10 @@
 # Collaborations
 
+<div class="collabs-grid">
+
 <div class="collab-card">
   <div class="collab-preview">
-    <img src="assets/images/monitorsocial-debate.jpg" alt="Monitor Social — Debate Electoral" />
+    <img src="assets/images/monitorsocial-debate.jpeg" alt="Monitor Social — Debate Electoral" />
   </div>
   <div class="collab-content">
     <h3 class="publication-title">
@@ -10,7 +12,7 @@
     </h3>
     <div class="publication-venue">Your Role · Year</div>
     <div class="publication-authors">
-      Brief description of what you worked on and what came out of it.
+      Brief description of what you worked on together.
     </div>
     <div class="publication-tags">
       <div class="project-links">
@@ -23,7 +25,7 @@
 
 <div class="collab-card">
   <div class="collab-preview">
-    <img src="assets/images/collab-placeholder.jpg" alt="Collaboration" />
+    <img src="assets/images/collab-placeholder.jpeg" alt="Collaboration" />
   </div>
   <div class="collab-content">
     <h3 class="publication-title">
@@ -39,4 +41,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>
