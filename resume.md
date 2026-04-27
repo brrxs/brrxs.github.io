@@ -146,7 +146,7 @@
     <span class="timeline-dot"></span>
     <div class="timeline-header">
       <span class="timeline-org">Pontificia Universidad Católica de Chile</span>
-      <span class="timeline-role">M.A. in Sociology</span>
+      <span class="timeline-role">MSc. in Sociology</span>
       <span class="timeline-dates">Mar 2023 – Jan 2025</span>
     </div>
     <div class="timeline-meta">Graduated with highest distinction · GPA 6.5/7</div>
