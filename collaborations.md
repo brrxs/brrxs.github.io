@@ -10,9 +10,9 @@
     <h3 class="publication-title">
       <a href="https://www.monitorsocial.cl/debate" class="publication-link" target="_blank" rel="noopener">Monitor Social — Debate Electoral</a>
     </h3>
-    <div class="publication-venue">Your Role · Year</div>
+    <div class="publication-venue">2025</div>
     <div class="publication-authors">
-      Brief description of what you worked on together.
+      The project tracked real-time public attention toward the 2025 Chilean presidential candidates by collecting and analyzing large-scale digital trace data and producing findings published in CIPER and broadcast tools used on Chilevisión.
     </div>
     <div class="publication-tags">
       <div class="project-links">
@@ -24,6 +24,7 @@
   </div>
 </div>
 
+<!-- placeholder
 <div class="collab-card">
   <div class="collab-preview">
     <img src="assets/images/collab-placeholder.jpeg" alt="Collaboration" />
@@ -43,5 +44,6 @@
     </div>
   </div>
 </div>
+-->
 
 </div>
