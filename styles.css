@@ -1671,8 +1671,8 @@ html {
 /* ============================= */
 .collabs-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     margin-top: 1.5rem;
 }
 
@@ -1694,7 +1694,7 @@ html {
 
 .collab-preview {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
     overflow: hidden;
     background-color: var(--color-border);
 }
@@ -1712,7 +1712,7 @@ html {
 }
 
 .collab-content {
-    padding: 1rem 1.25rem 1.25rem;
+    padding: 0.65rem 0.85rem 0.85rem;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1723,7 +1723,13 @@ html {
     padding-top: 0.75rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+    .collabs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
     .collabs-grid {
         grid-template-columns: 1fr;
     }
