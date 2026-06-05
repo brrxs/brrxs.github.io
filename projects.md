@@ -14,6 +14,30 @@
 
 ## 2026
 
+<div class="publication-card" data-tags="python digital-trace">
+  <div class="publication-content">
+    <h3 class="publication-title">
+      <a href="projects/presscl.html" class="publication-link">PressCL — Chilean News Scraper</a>
+    </h3>
+    <div class="publication-venue">Web Scraping · Open Source Tool · 2026</div>
+    <div class="publication-authors">
+      Queries 16 major Chilean news outlets simultaneously by keyword and date range,
+      returning structured article datasets (CSV/Parquet) with no coding required.
+      Uses native search endpoints where available, with category-feed fallback and
+      rate-limited crawling.
+    </div>
+    <div class="publication-tags">
+      <div class="project-themes">
+        <span class="tag tag-theme" data-tag="python">Python</span>
+        <span class="tag tag-theme" data-tag="digital-trace">Digital Trace</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/brrxs/PressCL" class="tag tag-github" target="_blank" rel="noopener">GITHUB</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="publication-card" data-tags="python nlp digital-trace">
   <div class="publication-content">
     <h3 class="publication-title">
