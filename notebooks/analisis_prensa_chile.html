@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head><script>(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})()</script><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>analisis_prensa_chile</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script>
 (function() {
@@ -7916,8 +7916,210 @@ body.jp-Notebook {
     display: block;
   }
 }
+</style><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><style>
+/* Earthy Academic palette (style-kit/) mapped onto JupyterLab's own theme
+   variables, so every element that already reads var(--jp-...) repaints
+   without touching nbconvert's structural CSS. */
+:root {
+  --jp-layout-color0: #F5F0E8;
+  --jp-layout-color1: #F5F0E8;
+  --jp-layout-color2: #EDE4D3;
+  --jp-layout-color3: #C8BAA2;
+  --jp-layout-color4: #A0876A;
+
+  --jp-content-font-color0: #241A12;
+  --jp-content-font-color1: #3D2B1F;
+  --jp-content-font-color2: rgba(61, 43, 31, 0.7);
+  --jp-content-font-color3: rgba(61, 43, 31, 0.5);
+  --jp-content-link-color: #B8541C;
+
+  --jp-ui-font-color0: #241A12;
+  --jp-ui-font-color1: #3D2B1F;
+  --jp-ui-font-color2: rgba(61, 43, 31, 0.7);
+  --jp-ui-font-color3: rgba(61, 43, 31, 0.5);
+
+  --jp-border-color0: #C8BAA2;
+  --jp-border-color1: #C8BAA2;
+  --jp-border-color2: #DCD0BC;
+  --jp-border-color3: #E7DFCE;
+  --jp-inverse-border-color: #5E7A6A;
+
+  --jp-brand-color0: #8C3E14;
+  --jp-brand-color1: #B8541C;
+  --jp-brand-color2: #D98F5F;
+  --jp-brand-color3: #EAC3A8;
+  --jp-brand-color4: #F0E0CE;
+  --jp-accent-color1: #5E7A6A;
+
+  --jp-cell-editor-background: #EDE4D3;
+  --jp-cell-editor-border-color: #C8BAA2;
+  --jp-cell-editor-active-background: #F5F0E8;
+  --jp-cell-editor-active-border-color: #B8541C;
+  --jp-cell-inprompt-font-color: #5E7A6A;
+  --jp-cell-outprompt-font-color: #5E7A6A;
+  --jp-cell-prompt-not-active-font-color: rgba(61, 43, 31, 0.5);
+
+  --jp-input-background: #EDE4D3;
+  --jp-input-border-color: #C8BAA2;
+  --jp-input-active-background: #F5F0E8;
+  --jp-input-hover-background: #F5F0E8;
+  --jp-input-active-border-color: #B8541C;
+
+  --jp-rendermime-table-row-background: #EDE4D3;
+  --jp-rendermime-table-row-hover-background: #E3D5B8;
+  --jp-rendermime-error-background: #F3D9CB;
+
+  --jp-toolbar-background: #F5F0E8;
+  --jp-toolbar-border-color: #C8BAA2;
+
+  --jp-mirror-editor-keyword-color: #8C3E14;
+  --jp-mirror-editor-atom-color: #5E7A6A;
+  --jp-mirror-editor-number-color: #7A5A17;
+  --jp-mirror-editor-def-color: #8C3E14;
+  --jp-mirror-editor-variable-color: #3D2B1F;
+  --jp-mirror-editor-variable-2-color: #8C3E14;
+  --jp-mirror-editor-variable-3-color: #5E7A6A;
+  --jp-mirror-editor-punctuation-color: #3D2B1F;
+  --jp-mirror-editor-property-color: #8C3E14;
+  --jp-mirror-editor-operator-color: #B8541C;
+  --jp-mirror-editor-comment-color: #6B5940;
+  --jp-mirror-editor-string-color: #2F5C3D;
+  --jp-mirror-editor-string-2-color: #8C3E14;
+  --jp-mirror-editor-meta-color: #5E7A6A;
+  --jp-mirror-editor-qualifier-color: rgba(61, 43, 31, 0.7);
+  --jp-mirror-editor-builtin-color: #3E6152;
+  --jp-mirror-editor-decorator-color: #7A5A17;
+  --jp-mirror-editor-bracket-color: #A0876A;
+  --jp-mirror-editor-tag-color: #5E7A6A;
+  --jp-mirror-editor-attribute-color: #8C3E14;
+
+  --jp-cell-editor-shadow: rgba(61, 43, 31, 0.12);
+
+  --jp-ui-font-family: 'JetBrains Mono', 'Courier New', monospace;
+  --jp-content-font-family: 'JetBrains Mono', 'Courier New', monospace;
+  --jp-code-font-family: 'JetBrains Mono', 'Courier New', monospace;
+  --jp-code-font-family-default: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+html[data-theme="dark"] {
+  --jp-layout-color0: #1E1510;
+  --jp-layout-color1: #1E1510;
+  --jp-layout-color2: #281C12;
+  --jp-layout-color3: #3E2A1C;
+  --jp-layout-color4: #5E4530;
+
+  --jp-content-font-color0: #FBF6EC;
+  --jp-content-font-color1: #EDE4D3;
+  --jp-content-font-color2: rgba(237, 228, 211, 0.7);
+  --jp-content-font-color3: rgba(237, 228, 211, 0.5);
+  --jp-content-link-color: #E07A3A;
+
+  --jp-ui-font-color0: #FBF6EC;
+  --jp-ui-font-color1: #EDE4D3;
+  --jp-ui-font-color2: rgba(237, 228, 211, 0.7);
+  --jp-ui-font-color3: rgba(237, 228, 211, 0.5);
+
+  --jp-border-color0: #3E2A1C;
+  --jp-border-color1: #3E2A1C;
+  --jp-border-color2: #332216;
+  --jp-border-color3: #2A1B12;
+  --jp-inverse-border-color: #7FA694;
+
+  --jp-brand-color0: #E07A3A;
+  --jp-brand-color1: #E07A3A;
+  --jp-brand-color2: #B8541C;
+  --jp-brand-color3: #5E3319;
+  --jp-brand-color4: #3A2415;
+  --jp-accent-color1: #7FA694;
+
+  --jp-cell-editor-background: #281C12;
+  --jp-cell-editor-border-color: #3E2A1C;
+  --jp-cell-editor-active-background: #1E1510;
+  --jp-cell-editor-active-border-color: #E07A3A;
+  --jp-cell-inprompt-font-color: #7FA694;
+  --jp-cell-outprompt-font-color: #7FA694;
+  --jp-cell-prompt-not-active-font-color: rgba(237, 228, 211, 0.5);
+
+  --jp-input-background: #281C12;
+  --jp-input-border-color: #3E2A1C;
+  --jp-input-active-background: #1E1510;
+  --jp-input-hover-background: #1E1510;
+  --jp-input-active-border-color: #E07A3A;
+
+  --jp-rendermime-table-row-background: #281C12;
+  --jp-rendermime-table-row-hover-background: #33221A;
+  --jp-rendermime-error-background: #4A2A1E;
+
+  --jp-toolbar-background: #1E1510;
+  --jp-toolbar-border-color: #3E2A1C;
+
+  --jp-mirror-editor-keyword-color: #E07A3A;
+  --jp-mirror-editor-atom-color: #7FA694;
+  --jp-mirror-editor-number-color: #DFB040;
+  --jp-mirror-editor-def-color: #E07A3A;
+  --jp-mirror-editor-variable-color: #EDE4D3;
+  --jp-mirror-editor-variable-2-color: #E07A3A;
+  --jp-mirror-editor-variable-3-color: #7FA694;
+  --jp-mirror-editor-punctuation-color: #EDE4D3;
+  --jp-mirror-editor-property-color: #E07A3A;
+  --jp-mirror-editor-operator-color: #E07A3A;
+  --jp-mirror-editor-comment-color: #A8998A;
+  --jp-mirror-editor-string-color: #5FA871;
+  --jp-mirror-editor-string-2-color: #DFB040;
+  --jp-mirror-editor-meta-color: #7FA694;
+  --jp-mirror-editor-qualifier-color: rgba(237, 228, 211, 0.7);
+  --jp-mirror-editor-builtin-color: #7FA694;
+  --jp-mirror-editor-decorator-color: #DFB040;
+  --jp-mirror-editor-bracket-color: #5E4530;
+  --jp-mirror-editor-tag-color: #7FA694;
+  --jp-mirror-editor-attribute-color: #E07A3A;
+
+  --jp-cell-editor-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Code cell style — terracotta accent stripe + rounded corners on the
+   input box, sage prompts, and gap-fill rules for pygments classes
+   nbconvert's own theme leaves uncolored (builtins, self/cls, decorators,
+   def/class names), per the style-kit Python-code-cell mockup. */
+.jp-InputArea-editor {
+  border-radius: 6px;
+  border-left: 3px solid var(--jp-brand-color1);
+  box-shadow: 0 1px 3px 0 var(--jp-cell-editor-shadow), 0 1px 2px -1px var(--jp-cell-editor-shadow);
+}
+.jp-InputPrompt { opacity: 0.85; }
+.jp-OutputPrompt { opacity: 0.7; }
+
+.highlight .nb { color: var(--jp-mirror-editor-builtin-color); }
+.highlight .bp { color: var(--jp-mirror-editor-builtin-color); font-style: italic; }
+.highlight .nd { color: var(--jp-mirror-editor-decorator-color); font-weight: 600; }
+.highlight .nf { color: var(--jp-mirror-editor-variable-color); font-weight: 700; }
+.highlight .nc { color: var(--jp-mirror-editor-keyword-color); font-weight: 700; }
+.highlight .o { color: var(--jp-mirror-editor-punctuation-color); font-weight: normal; }
+.highlight .ow { color: var(--jp-mirror-editor-keyword-color); font-weight: bold; }
+
+/* Theme toggle */
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1100;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid var(--jp-border-color2);
+  background: var(--jp-layout-color1);
+  color: var(--jp-content-font-color1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#theme-toggle svg { width: 16px; height: 16px; fill: currentColor; }
+#theme-toggle .sun-icon { display: none; }
+html[data-theme="dark"] #theme-toggle .sun-icon { display: block; }
+html[data-theme="dark"] #theme-toggle .moon-icon { display: none; }
 </style></head>
-<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light"><button id="toc-toggle" title="Mostrar/ocultar índice" type="button">☰</button><nav id="toc-sidebar"><div class="toc-title">Contenido</div><ul class="toc-list toc-level-1"><li class="toc-item toc-h1"><a href="#BTS-en-Chile:-del-rechazo-del-Estadio-Nacional-al-pulso-con-el-Gobierno">BTS en Chile: del rechazo del Estadio Nacional al pulso con el Gobierno</a><ul class="toc-list toc-level-2"><li class="toc-item toc-h2"><a href="#1.-Carga-y-exploraci%C3%B3n">1. Carga y exploración</a><ul class="toc-list toc-level-3"></ul></li><li class="toc-item toc-h2"><a href="#2.-Limpieza">2. Limpieza</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#2.1-Quitar-el-sufijo-de-fuente">2.1 Quitar el sufijo de fuente</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.2-Duplicados">2.2 Duplicados</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.3-Idioma">2.3 Idioma</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.4-Filtro-de-relevancia:-%C2%BFhabla-del-caso-chileno?">2.4 Filtro de relevancia: ¿habla del caso chileno?</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.5-Resultado-y-guardado">2.5 Resultado y guardado</a><ul class="toc-list toc-level-4"></ul></li></ul></li><li class="toc-item toc-h2"><a href="#3.-Sentimiento-con-pysentimiento">3. Sentimiento con pysentimiento</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#3.1-Chunking:-partir-texto-largo-en-fragmentos-analizables">3.1 Chunking: partir texto largo en fragmentos analizables</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.2-Distribuci%C3%B3n-general-del-sentimiento">3.2 Distribución general del sentimiento</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.3-Evoluci%C3%B3n-diaria-del-sentimiento">3.3 Evolución diaria del sentimiento</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.4-El-pulso-de-la-cobertura:-la-curva-del-conflicto">3.4 El pulso de la cobertura: la curva del conflicto</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.5-%C2%BFQu%C3%A9-medio-cubri%C3%B3-m%C3%A1s-duro?">3.5 ¿Qué medio cubrió más duro?</a><ul class="toc-list toc-level-4"></ul></li></ul></li><li class="toc-item toc-h2"><a href="#4.-Categorizaci%C3%B3n-por-reglas-de-palabras-clave">4. Categorización por reglas de palabras clave</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#4.1-Volumen-por-categor%C3%ADa">4.1 Volumen por categoría</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#4.2-Sentimiento-por-categor%C3%ADa">4.2 Sentimiento por categoría</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#4.3-Categor%C3%ADas-en-el-tiempo">4.3 Categorías en el tiempo</a><ul class="toc-list toc-level-4"></ul></li></ul></li><li class="toc-item toc-h2"><a href="#5.-Regresi%C3%B3n-binomial:-%C2%BFel-tono-negativo-depende-de-la-categor%C3%ADa?">5. Regresión binomial: ¿el tono negativo depende de la categoría?</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#5.1-%C2%BFY-el-tono-neutro?">5.1 ¿Y el tono neutro?</a><ul class="toc-list toc-level-4"></ul></li></ul></li></ul></li></ul></nav>
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light"><button id="theme-toggle" title="Cambiar tema claro/oscuro" type="button"><svg class="sun-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg><svg class="moon-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button><button id="toc-toggle" title="Mostrar/ocultar índice" type="button">☰</button><nav id="toc-sidebar"><div class="toc-title">Contenido</div><ul class="toc-list toc-level-1"><li class="toc-item toc-h1"><a href="#BTS-en-Chile:-del-rechazo-del-Estadio-Nacional-al-pulso-con-el-Gobierno">BTS en Chile: del rechazo del Estadio Nacional al pulso con el Gobierno</a><ul class="toc-list toc-level-2"><li class="toc-item toc-h2"><a href="#1.-Carga-y-exploraci%C3%B3n">1. Carga y exploración</a><ul class="toc-list toc-level-3"></ul></li><li class="toc-item toc-h2"><a href="#2.-Limpieza">2. Limpieza</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#2.1-Quitar-el-sufijo-de-fuente">2.1 Quitar el sufijo de fuente</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.2-Duplicados">2.2 Duplicados</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.3-Idioma">2.3 Idioma</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.4-Filtro-de-relevancia:-%C2%BFhabla-del-caso-chileno?">2.4 Filtro de relevancia: ¿habla del caso chileno?</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#2.5-Resultado-y-guardado">2.5 Resultado y guardado</a><ul class="toc-list toc-level-4"></ul></li></ul></li><li class="toc-item toc-h2"><a href="#3.-Sentimiento-con-pysentimiento">3. Sentimiento con pysentimiento</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#3.1-Chunking:-partir-texto-largo-en-fragmentos-analizables">3.1 Chunking: partir texto largo en fragmentos analizables</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.2-Distribuci%C3%B3n-general-del-sentimiento">3.2 Distribución general del sentimiento</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.3-Evoluci%C3%B3n-diaria-del-sentimiento">3.3 Evolución diaria del sentimiento</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.4-El-pulso-de-la-cobertura:-la-curva-del-conflicto">3.4 El pulso de la cobertura: la curva del conflicto</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#3.5-%C2%BFQu%C3%A9-medio-cubri%C3%B3-m%C3%A1s-duro?">3.5 ¿Qué medio cubrió más duro?</a><ul class="toc-list toc-level-4"></ul></li></ul></li><li class="toc-item toc-h2"><a href="#4.-Categorizaci%C3%B3n-por-reglas-de-palabras-clave">4. Categorización por reglas de palabras clave</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#4.1-Volumen-por-categor%C3%ADa">4.1 Volumen por categoría</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#4.2-Sentimiento-por-categor%C3%ADa">4.2 Sentimiento por categoría</a><ul class="toc-list toc-level-4"></ul></li><li class="toc-item toc-h3"><a href="#4.3-Categor%C3%ADas-en-el-tiempo">4.3 Categorías en el tiempo</a><ul class="toc-list toc-level-4"></ul></li></ul></li><li class="toc-item toc-h2"><a href="#5.-Regresi%C3%B3n-binomial:-%C2%BFel-tono-negativo-depende-de-la-categor%C3%ADa?">5. Regresión binomial: ¿el tono negativo depende de la categoría?</a><ul class="toc-list toc-level-3"><li class="toc-item toc-h3"><a href="#5.1-%C2%BFY-el-tono-neutro?">5.1 ¿Y el tono neutro?</a><ul class="toc-list toc-level-4"></ul></li></ul></li></ul></li></ul></nav>
 <main>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a775ba2a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -14905,6 +15107,19 @@ if (outputEl) {{
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+})();
+</script><script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  btn.setAttribute('aria-label',
+    document.documentElement.getAttribute('data-theme') === 'dark'
+      ? 'Switch to light theme' : 'Switch to dark theme');
+  btn.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    btn.setAttribute('aria-label', next === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  });
 })();
 </script></body>
 <script type="application/vnd.jupyter.widget-state+json">
