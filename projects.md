@@ -14,6 +14,31 @@
 
 ## 2026
 
+<div class="publication-card" data-tags="python nlp digital-trace">
+  <div class="publication-content">
+    <h3 class="publication-title">
+      <a href="projects/analisis-prensa-chile.html" class="publication-link">BTS in Chile: Press Coverage Analysis</a>
+    </h3>
+    <div class="publication-venue">Sentiment Analysis · Applied Research · 2026</div>
+    <div class="publication-authors">
+      Sentiment analysis and topic categorization of 483 Chilean news articles covering the
+      BTS–Estadio Nacional dispute. Cleans a PressCL export down from 955 raw rows, scores tone
+      with a Spanish RoBERTuito model, and tests with a binomial GLM whether negative coverage
+      concentrates in specific topics.
+    </div>
+    <div class="publication-tags">
+      <div class="project-themes">
+        <span class="tag tag-theme" data-tag="python">Python</span>
+        <span class="tag tag-theme" data-tag="nlp">NLP</span>
+        <span class="tag tag-theme" data-tag="digital-trace">Digital Trace</span>
+      </div>
+      <div class="project-links">
+        <a href="notebooks/analisis_prensa_chile.html" class="tag tag-notebook" target="_blank" rel="noopener">NOTEBOOK</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="publication-card" data-tags="python digital-trace">
   <div class="publication-content">
     <h3 class="publication-title">
@@ -38,6 +63,7 @@
   </div>
 </div>
 
+<!--
 <div class="publication-card" data-tags="python nlp digital-trace">
   <div class="publication-content">
     <h3 class="publication-title">
@@ -63,3 +89,4 @@
     </div>
   </div>
 </div>
+-->
