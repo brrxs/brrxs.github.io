@@ -9,12 +9,23 @@
   <div class="timeline-item">
     <span class="timeline-dot"></span>
     <div class="timeline-header">
+      <span class="timeline-org">Monitor Social</span>
+      <span class="timeline-role">Consultant</span>
+      <span class="timeline-dates">Apr 2026 – <strong class="text-accent">Present</strong></span>
+    </div>
+    <div class="timeline-meta">Santiago, Chile</div>
+    <div class="timeline-desc">Design and deliver digital attention and reputation studies for public figures, institutions, and infrastructure projects, benchmarking search interest and tracking press and social media coverage over time. Build reproducible Python pipelines for large-scale digital trace data collection and classification, and conduct cross-platform sentiment analysis to characterize public discourse and reputational tone.</div>
+  </div>
+
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-header">
       <span class="timeline-org">Universidad Finis Terrae</span>
-      <span class="timeline-role">External Data Analyst</span>
+      <span class="timeline-role">Consultant</span>
       <span class="timeline-dates">Oct 2025 – <strong class="text-accent">Present</strong></span>
     </div>
     <div class="timeline-meta">Santiago, Chile</div>
-    <div class="timeline-desc">Applied supervised learning to identify accreditation indicators from administrative datasets. Developed PCA-based institutional positioning frameworks and scenario simulations.</div>
+    <div class="timeline-desc">Lead a portfolio of research studies building a strategic comparative framework for institutional positioning. Apply supervised learning and NLP to validate accreditation indicators from administrative data and official rulings, and benchmark dimensionality-reduction and rule-based classification approaches with scenario-based simulations; developed a platform to visualize the resulting analysis.</div>
   </div>
 
   <div class="timeline-item">
@@ -72,12 +83,23 @@
   <div class="timeline-item">
     <span class="timeline-dot"></span>
     <div class="timeline-header">
-      <span class="timeline-org">Project: Continuity and Change of Social Obligations</span>
-      <span class="timeline-role">Research Fellow → Research Assistant</span>
-      <span class="timeline-dates">Mar 2024 – Nov 2025</span>
+      <span class="timeline-org">Cancer and Women in Chile: A Digital Mapping of Actors, Topics, and Conversations</span>
+      <span class="timeline-role">Researcher</span>
+      <span class="timeline-dates">Jan 2026 – Apr 2026</span>
     </div>
     <div class="timeline-meta">Santiago, Chile</div>
-    <div class="timeline-desc">Modeled civic engagement trajectories from retrospective longitudinal survey data. Applied optimal matching and clustering (TraMineR), multinomial logistic regression, and robustness analyses. Authored Master's thesis; derived manuscript under review at <em>Advances in Life Course Research</em>.</div>
+    <div class="timeline-desc">Co-authored a mixed-methods digital analysis mapping 90 key stakeholders in the Chilean oncology system using NLP-based classification of social media, press, and forum posts. Analyzed search-interest and platform-level sentiment trends to identify thematic clusters in public discourse on cancer and gender; presented findings at Diálogos 2026: Liderazgo, Mujer y Cáncer (Observatorio del Cáncer).</div>
+  </div>
+
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-header">
+      <span class="timeline-org">Digital Media Monitoring of Presidential Candidates</span>
+      <span class="timeline-role">Co-Investigator</span>
+      <span class="timeline-dates">Sep 2025 – Dec 2025</span>
+    </div>
+    <div class="timeline-meta">Santiago, Chile</div>
+    <div class="timeline-desc">Collected and analyzed large-scale digital trace data (Google Trends, YouTube, X) to model real-time attention dynamics during the 2025 presidential campaign. Applied D'Hondt seat allocation methods and statistical adjustments for live projection tools; co-authored quantitative analysis published in <em>CIPER</em> and contributed to electoral coverage on Chilevisión.</div>
   </div>
 
   <div class="timeline-item">
@@ -89,6 +111,28 @@
     </div>
     <div class="timeline-meta">Santiago, Chile</div>
     <div class="timeline-desc">Analyzed complex survey data (stratified sampling) and conducted Latent Class Analysis to identify attitudinal typologies toward income tax legitimacy. Contributed to manuscript development for an edited volume.</div>
+  </div>
+
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-header">
+      <span class="timeline-org">Project: Continuity and Change of Social Obligations</span>
+      <span class="timeline-role">Research Fellow → Research Assistant</span>
+      <span class="timeline-dates">Mar 2024 – Nov 2025</span>
+    </div>
+    <div class="timeline-meta">Santiago, Chile</div>
+    <div class="timeline-desc">Modeled civic engagement trajectories from retrospective longitudinal survey data. Applied optimal matching and clustering (TraMineR), multinomial logistic regression, and robustness analyses. Authored Master's thesis; derived manuscript under review at <em>Voluntas</em>.</div>
+  </div>
+
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-header">
+      <span class="timeline-org">Survey Research on Emerging Biotechnologies — iGEM Munich</span>
+      <span class="timeline-role">External Analyst</span>
+      <span class="timeline-dates">2024 – 2025</span>
+    </div>
+    <div class="timeline-meta">Munich, Germany</div>
+    <div class="timeline-desc">Analyzed survey data on public perceptions of molecular recording technologies using multivariate statistical methods. Estimated Latent Class Models to identify attitudinal typologies and authored analytical reports translating statistical findings into substantive interpretation.</div>
   </div>
 
   <div class="timeline-item">
@@ -111,6 +155,17 @@
     </div>
     <div class="timeline-meta">Santiago, Chile</div>
     <div class="timeline-desc">Conducted structured literature review on feminist and queer performance activism in Chile. Designed qualitative data collection instruments for empirical fieldwork.</div>
+  </div>
+
+  <div class="timeline-item">
+    <span class="timeline-dot"></span>
+    <div class="timeline-header">
+      <span class="timeline-org">Right to Housing and Adequate Environment for Sexual and Gender Minorities</span>
+      <span class="timeline-role">Researcher</span>
+      <span class="timeline-dates">Mar 2021 – Dec 2021</span>
+    </div>
+    <div class="timeline-meta">Santiago, Chile</div>
+    <div class="timeline-desc">Conducted mixed-method research combining in-depth interviews and descriptive statistical analysis. Delivered findings to the Chilean Constitutional Convention in collaboration with SUR-Corporación and OTD Chile, and organized an interdisciplinary seminar on housing access and policy for sexual and gender minorities.</div>
   </div>
 
 </div>
@@ -170,17 +225,31 @@
 
 ## Publications
 
-**Barrientos, T.**, Biehl, A. "Life Course Trajectories of Civic Engagement: Evidence from Chile". *Advances in Life Course Research* (Under review, 2025)
+**Barrientos, T.**, Biehl, A. (2026). "Life Course Trajectories of Civic Engagement: Evidence from Chile". *Voluntas* (Under review)
 
-Méndez, N., **Barrientos, T.**, Vergara, C. "Informal Territory and Housing Trajectories of LGBT+ People: The Laurelia Arcoíris Settlement, Tomé, Chile". *INVI* (Under review, 2025)
+Méndez, N., **Barrientos, T.**, Vergara, C. (2025). "Informal Territory and Housing Trajectories of LGBT+ People: The Laurelia Arcoíris Settlement, Tomé, Chile". *INVI* (Accepted pending minor revisions)
+
+Bustamante, G., **Barrientos, T.** (2026). "Picking Sides: Systematic Value Leaning across AI Companies". Working paper, intended for the special issue on Culture and Artificial Intelligence, *PNAS Nexus*
+
+---
+
+## Conferences
+
+**Barrientos, T.**, Bustamante, G. "Chilean Musical Lyrics: Thematic Structure and Evolution over the Last 25 Years, Evidence from Structural Topic Modelling", *XLVIII Jornadas Nacionales de Estadística (JNE)*, Valparaíso, Chile (2026). Oral presentation.
+
+**Barrientos, T.** "Life Course Trajectories of Civic Engagement: Evidence from Chile", *LaPolMeth Conference: Latin American Political Methodology Meeting*, Viña del Mar, Chile (2025). Poster.
+
+**Barrientos, T.** "The Trajectories of Civic Participation in Santiago, Chile: Perspectives from the Life Course", *La Tríada — International Congress on Interdisciplinary Research and Education*, Santiago, Chile (2024). Poster.
 
 ---
 
 ## Skills
 
-**Programming & Statistical Software** — R (advanced), Stata (advanced), Python (intermediate), SQL (basic), LaTeX, R Markdown, Power BI
+**Programming & Statistical Software** — R (advanced), Stata (advanced), Python (advanced), SQL (basic), LaTeX, R Markdown, Power BI, Git
 
-**Quantitative & Computational Methods** — Sequence analysis · Event history analysis · Multilevel modeling · SEM · Causal inference (DiD, RDD, IV) · Latent Class Analysis · GLM · NLP · Digital trace data analysis
+**Quantitative & Computational Methods** — Sequence analysis · Event history analysis · Multilevel modeling · SEM · Causal inference (DiD, RDD, IV) · Latent Class Analysis · GLM · Cross-sectional and longitudinal modeling · NLP · Digital trace data analysis
+
+**Research Competencies** — Complex survey design · Data cleaning and reproducible workflows · Academic writing · Literature review · Interdisciplinary collaboration
 
 **Languages** — Spanish (native) · English (advanced)
 
@@ -189,3 +258,10 @@ Méndez, N., **Barrientos, T.**, Vergara, C. "Informal Territory and Housing Tra
 ## Certifications
 
 Human Subjects Research, CITI Program — May 2024 (valid through 2027)
+
+---
+
+## Professional Memberships
+
+- Colegio de Sociólogos de Chile (Chilean College of Sociologists) — 2025–present
+- Sociedad Chilena de Estadística (SOCHE) — 2026–present
