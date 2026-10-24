@@ -17,3 +17,7 @@ assets/pyproject.toml
 
 # GitHub Pages custom domain (not needed for username.github.io)
 CNAME
+
+# Local working files (not for the site)
+mock ups/
+JNE 2026 - Barrientos; Bustamante.pdf

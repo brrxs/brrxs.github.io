@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilean Lyrics & Structural Topic Modeling · Tomás Barrientos</title>
+    <meta name="description" content="JNE 2026 talk: thematic structure and evolution of Chilean music lyrics over 25 years, estimated with a Structural Topic Model on 8,572 songs by 363 artists.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            try {
+                var saved = localStorage.getItem('theme');
+                var theme = saved === 'dark' || saved === 'light' ? saved : 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <style>
+        .slide { position: relative; border: 1px solid var(--color-border); background: var(--color-card-bg); border-radius: 6px;
+                 padding: 1.4rem 1.4rem 1.2rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px var(--color-shadow); }
+        @media (min-width: 900px) { .slide { aspect-ratio: 16 / 9; } .slide.auto { aspect-ratio: auto; } }
+        .slide > h2 { margin: 0 3rem 1rem 0; font-size: 1.5rem; line-height: 1.2; color: var(--color-global-text); border: 0; padding: 0; }
+        .slide .sn { position: absolute; top: .9rem; right: 1rem; font-size: .75rem; color: var(--color-supporting); }
+        .slide h3 { font-size: .95rem; margin: 1rem 0 .3rem; color: var(--color-accent); }
+        .slide p, .slide li { font-size: .9rem; line-height: 1.55; }
+        .slide ul { margin: .3rem 0 .3rem 1.2rem; list-style: disc; }
+        .slide .cite { color: var(--color-supporting); }
+        .slide.title { display: flex; flex-direction: column; justify-content: center; border-left: 8px solid var(--color-accent-2); }
+        .slide.title h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 1.2rem; text-transform: uppercase; font-weight: 400; }
+        .slide.title h1 em { color: var(--color-accent); font-style: normal; display: block; }
+        .slide.title .by { color: var(--color-supporting); font-weight: 600; margin: 0; }
+        .slide.title .ev { margin: 0 0 .8rem; }
+        .slide.pic { padding: 0; overflow: hidden; }
+        .slide.pic .pg { width: 100%; display: block; }
+        .slide.white { background: #fff; --color-card-bg: #fff; --color-global-bg: #fff; --color-global-text: #222; --color-border: #ccc; --color-supporting: #666; }
+        @media (min-width: 900px) { .slide.wide { width: min(1200px, 96vw); margin-left: calc(50% - min(600px, 48vw)); aspect-ratio: 16 / 9; }
+                                    .slide.wide > h2 { font-size: 1.3rem; margin-bottom: .3rem; } }
+        .two { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+        @media (min-width: 700px) { .two { grid-template-columns: 1fr 1fr; } }
+        .faces { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1rem; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 4px solid var(--color-accent); }
+        .faces figure { margin: 0; text-align: center; font-size: .8rem; }
+        .faces img { width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--color-accent); object-fit: cover; display: block; margin: 0 auto .3rem; }
+        .faces b { display: block; }
+        .covers { width: 100%; border-radius: 4px; display: block; margin-bottom: 1rem; }
+        .steps { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); margin-bottom: 1rem; }
+        .steps > div { border: 1px solid var(--color-border); border-radius: 6px; padding: .6rem .7rem; font-size: .78rem; line-height: 1.45; }
+        .steps b { display: block; color: var(--color-accent); margin-bottom: .2rem; }
+        .steps .hl { background: var(--color-supporting); color: #F5F0E8; border-color: var(--color-supporting); }
+        .steps .hl b { color: #F5F0E8; }
+        .steps .dim { opacity: .65; font-style: italic; }
+        .stm { display: grid; gap: 1rem; grid-template-columns: 1fr; align-items: start; }
+        @media (min-width: 700px) { .stm { grid-template-columns: 1.1fr 1fr; } }
+        .stm img { width: 100%; background: #F5F0E8; border-radius: 4px; }
+        .glossary { font-size: .8rem; line-height: 1.45; }
+        .glossary dt { font-weight: 700; color: var(--color-accent); margin-top: .45rem; }
+        .glossary dd { margin: 0; }
+        .clouds { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+        .cloud { border: 1px solid var(--color-border); border-radius: 6px; padding: .5rem .6rem; }
+        .cloud h4 { margin: 0 0 .3rem; font-size: .78rem; }
+        .cloud div { display: flex; flex-wrap: wrap; gap: 0 .45rem; align-items: baseline; line-height: 1.25; }
+        .panels { display: grid; gap: .6rem; grid-template-columns: 1fr; }
+        @media (min-width: 700px) { .panels { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 900px) { .panels.three { grid-template-columns: 1fr 1fr 1fr; } }
+        .panels h4 { margin: 0; font-size: .75rem; text-align: center; }
+        .chart { display: block; width: 100%; overflow: visible; touch-action: pan-y; }
+        .chart .grid { stroke: var(--color-border); stroke-width: 1; opacity: .5; }
+        .chart .grid.v { opacity: .22; }
+        .chart .zero { stroke: var(--color-global-text); opacity: .5; }
+        .chart .tick { fill: var(--color-global-text); opacity: .75; font-size: 11px; font-family: inherit; }
+        .chart .axl { fill: var(--color-global-text); font-size: 11.5px; font-family: inherit; }
+        .chart .guide { stroke: var(--color-global-text); opacity: .35; stroke-dasharray: 3 3; }
+        .chart .pl { fill: var(--color-global-text); opacity: .7; font-size: 10px; text-anchor: middle; }
+        .legend { display: flex; flex-wrap: wrap; gap: .1rem .6rem; margin: .2rem 0 .4rem; }
+        .legend button { display: inline-flex; align-items: center; gap: .35rem; border: 0; background: none; color: var(--color-global-text);
+                          font: inherit; font-size: .74rem; padding: .15rem .2rem; cursor: pointer; }
+        .legend button.off { opacity: .35; }
+        .legend .sw { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+        .note { font-size: .75rem !important; font-style: italic; opacity: .8; margin: .4rem 0 0; }
+        .tip { position: fixed; z-index: 60; pointer-events: none; display: none; background: var(--color-global-bg); color: var(--color-global-text);
+               border: 1px solid var(--color-border); box-shadow: 0 2px 8px var(--color-shadow); padding: .4rem .55rem; font-size: .72rem; line-height: 1.4; }
+        .tip i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+        .appendix { margin: 2rem 0 1rem; font-size: 1rem; color: var(--color-supporting); }
+        .dl { margin: 0 0 1.2rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+    </style>
+</head>
+<body class="bg-global-bg text-global-text antialiased">
+
+    <!-- Fixed Header -->
+    <header id="main-header" class="group">
+        <div class="header-grid">
+            <a href="../index.html" class="group header-logo flex items-center">
+                <img src="../assets/logo.svg" class="me-3 h-12 w-12 sm:me-4 sm:h-20 sm:w-20" alt="Logo">
+            </a>
+            <div class="header-title">
+                <span class="text-xl font-bold sm:text-2xl">Tomás Barrientos</span>
+            </div>
+            <nav class="mobile-nav-menu header-nav sm:flex sm:flex-row sm:items-center" id="navigation-menu">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#resources">Resources</a>
+                <a href="../index.html#resume">Résumé</a>
+            </nav>
+            <div class="header-controls flex items-center gap-3">
+                <button id="theme-toggle" class="flex h-7 w-7 items-center justify-center rounded-md border border-accent-2/20 bg-accent-2/10 p-1 transition-colors hover:bg-accent-2/20" aria-label="Switch to dark theme">
+                    <svg class="sun-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="moon-icon h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+                <button id="toggle-navigation-menu" class="flex h-7 w-7 items-center justify-center rounded-md border border-accent-2/20 bg-accent-2/10 p-1 transition-colors hover:bg-accent-2/20 sm:hidden" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-3xl px-4 sm:px-8">
+        <a href="../index.html#projects" class="project-back-link">← Projects</a>
+
+        <div class="project-detail-header">
+            <h1>Chilean Lyrics &amp; Structural Topic Modeling</h1>
+            <div class="project-meta">Conference Talk · Topic Modeling · 2026</div>
+            <div class="project-detail-tags">
+                <span class="tag tag-theme">R</span>
+                <span class="tag tag-theme">NLP</span>
+            </div>
+        </div>
+
+        <div class="dl">
+            <a href="../assets/JNE2026_slides.pdf" class="tag tag-notebook" target="_blank" rel="noopener">SLIDES (PDF) ↗</a>
+        </div>
+
+        <!-- 1 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-01.webp" alt="Title slide" loading="lazy">
+        </section>
+
+        <!-- 2 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-02.webp" alt="Motivation" loading="lazy">
+        </section>
+
+        <!-- 3 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-03.webp" alt="Literature" loading="lazy">
+        </section>
+
+        <!-- 4 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-04.webp" alt="Research question and objectives" loading="lazy">
+        </section>
+
+        <!-- 5 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-05.webp" alt="Corpus and modeling" loading="lazy">
+        </section>
+
+        <!-- 6 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-06.webp" alt="Structural Topic Modeling" loading="lazy">
+        </section>
+
+        <!-- 7 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-07.webp" alt="The eight topics" loading="lazy">
+        </section>
+
+        <!-- 8 -->
+        <section class="slide auto white">
+            <span class="sn">8</span>
+            <h2>STM (K = 8): trayectorias de prevalencia de los tópicos</h2>
+            <div id="c-traj"></div>
+            <p class="note">Prevalencia media (θ) por año. Clic en un tópico para ocultarlo o mostrarlo; doble clic para aislarlo (otra vez para mostrar todos).</p>
+        </section>
+
+        <!-- 9 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-09.webp" alt="Topic correlation network" loading="lazy">
+        </section>
+
+        <!-- 10 -->
+        <section class="slide auto white wide">
+            <span class="sn">10</span>
+            <h2>STM (K = 8): prevalencia de temas según el modelo a lo largo del tiempo</h2>
+            <p class="note" style="margin:0 0 .6rem">prevalencia ~ s(año, df = 10), con banda de confianza del 95%. Eje vertical: proporción esperada del tema (escala propia por panel). Pasa el cursor para ver los valores.</p>
+            <div class="panels three" id="c-curves"></div>
+        </section>
+
+        <!-- 11 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-11.webp" alt="Implications and limitations" loading="lazy">
+        </section>
+
+        <!-- 12 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-12.webp" alt="Muchas gracias" loading="lazy">
+        </section>
+
+        <h2 class="appendix">Appendix</h2>
+
+        <!-- 14 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-14.webp" alt="Coherence-exclusivity frontier" loading="lazy">
+        </section>
+
+        <!-- 15 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-15.webp" alt="Diagnostics by number of topics" loading="lazy">
+        </section>
+
+        <!-- 16 -->
+        <section class="slide pic">
+            <img class="pg" src="../assets/images/jne2026/slide-16.webp" alt="Change by unit of analysis" loading="lazy">
+        </section>
+
+        <div class="project-action-links">
+            <a href="../assets/JNE2026_slides.pdf" class="tag tag-notebook" target="_blank" rel="noopener">SLIDES (PDF) ↗</a>
+        </div>
+    </main>
+
+    <div class="mx-auto max-w-3xl px-4 sm:px-8 py-8 text-center text-sm opacity-75">
+        <p>Built from scratch by me and Claude :)</p>
+    </div>
+
+    <div class="tip" id="tip"></div>
+    <script src="jne2026/data.js"></script>
+    <script>
+    // Global topic definitions: rename topics or change colors here; every chart updates. Data is keyed by topic number.
+    const TOPICS = {
+        1: { name: 'Naturaleza y ensueño',        color: '#1b9e77' },
+        2: { name: 'Estilo gánster',      color: '#d95f02' },
+        3: { name: 'Fiesta y baile',           color: '#7570b3' },
+        4: { name: 'Sátira y cultura pop',    color: '#e7298a' },
+        5: { name: 'Perreo y deseo',         color: '#66a61e' },
+        6: { name: 'Desamor y nostalgia',  color: '#e6ab02' },
+        7: { name: 'Protesta y crítica social', color: '#a6761d' },
+        8: { name: 'Culpa y reflexión',      color: '#8a8a8a' }
+    };
+    const ROBUST = [2, 5, 6, 7]; // trends that hold under all three estimands
+    const ESTIMANDS = [
+        { id: 'song_weighted',    label: 'Song-weighted',    color: '#8a8a8a' },
+        { id: 'artist_weighted',  label: 'Artist-weighted',  color: '#1f78b4' },
+        { id: 'frame_reweighted', label: 'Reweighted to frame', color: '#e7298a' }
+    ];
+
+    const D = window.JNE, NS = 'http://www.w3.org/2000/svg', tip = document.getElementById('tip');
+    const TN = Object.keys(TOPICS).map(Number);
+    const el = (t, a = {}, p, txt) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; if (p) p.appendChild(e); return e; };
+    const html = (t, c, p, h) => { const e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; if (p) p.appendChild(e); return e; };
+    const dot = c => `<i style="background:${c}"></i>`;
+    const pct = v => (v * 100).toFixed(1) + '%';
+    function showTip(ev, h) {
+        tip.innerHTML = h; tip.style.display = 'block';
+        tip.style.left = Math.max(4, Math.min(ev.clientX + 12, innerWidth - tip.offsetWidth - 6)) + 'px';
+        tip.style.top = Math.min(ev.clientY + 14, innerHeight - tip.offsetHeight - 6) + 'px';
+    }
+    const hideTip = () => { tip.style.display = 'none'; };
+
+    function ticks(lo, hi, n = 5) {
+        const raw = (hi - lo) / n, p = 10 ** Math.floor(Math.log10(raw)), f = raw / p, s = (f < 1.5 ? 1 : f < 3 ? 2 : f < 7 ? 5 : 10) * p, out = [];
+        for (let v = Math.ceil(lo / s - 1e-9) * s; v <= hi + 1e-9; v += s) out.push(+v.toFixed(10));
+        return out;
+    }
+
+    // redraw charts when the width changes so text stays at a readable size
+    const charts = []; let lastW = innerWidth, rt;
+    const reg = f => { charts.push(f); f(); };
+    addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (innerWidth !== lastW) { lastW = innerWidth; charts.forEach(f => f()); } }, 150); });
+
+    function axes(svg, W, H, m, xd, yd, o) {
+        const X = v => m.l + (v - xd[0]) / (xd[1] - xd[0]) * (W - m.l - m.r);
+        const Y = v => H - m.b - (v - yd[0]) / (yd[1] - yd[0]) * (H - m.t - m.b);
+        (o.yt || ticks(yd[0], yd[1], 5)).forEach(v => {
+            el('line', { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), class: 'grid' }, svg);
+            el('text', { x: m.l - 6, y: Y(v) + 4, class: 'tick', 'text-anchor': 'end' }, svg, (o.yf || (d => d))(v));
+        });
+        (o.xt || ticks(xd[0], xd[1], 6)).forEach(v => {
+            el('line', { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, class: 'grid v' }, svg);
+            el('text', { x: X(v), y: H - m.b + 16, class: 'tick', 'text-anchor': 'middle' }, svg, (o.xf || (d => d))(v));
+        });
+        if (o.xlab) el('text', { x: (m.l + W - m.r) / 2, y: H - 4, class: 'axl', 'text-anchor': 'middle' }, svg, o.xlab);
+        if (o.ylab) el('text', { transform: `translate(12 ${(m.t + H - m.b) / 2}) rotate(-90)`, class: 'axl', 'text-anchor': 'middle' }, svg, o.ylab);
+        return { X, Y };
+    }
+
+    function legend(host, items, off, redraw) {
+        const lg = html('div', 'legend', host);
+        items.forEach(it => {
+            const b = html('button', off.has(it.id) ? 'off' : '', lg, `<span class="sw" style="background:${it.color}"></span>${it.label}`);
+            b.onclick = () => { off.has(it.id) ? off.delete(it.id) : off.add(it.id); redraw(); };
+            b.ondblclick = () => { const alone = items.every(o => o.id === it.id || off.has(o.id)); off.clear(); if (!alone) items.forEach(o => o.id !== it.id && off.add(o.id)); redraw(); };
+        });
+    }
+
+    // series: [{id,label,color,pts:[[x,y]] or [[x,y,lo,hi]] when band}]
+    function lineChart(host, o) {
+        const off = new Set();
+        reg(() => {
+            host.innerHTML = '';
+            const W = Math.max(280, host.clientWidth), H = o.H || 400, m = Object.assign({ l: 46, r: 12, t: 10, b: 34 }, o.m);
+            const lgh = html('div', '', host), svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, class: 'chart' }, html('div', '', host));
+            function draw() {
+                lgh.innerHTML = ''; if (o.legend) legend(lgh, o.series, off, draw);
+                svg.innerHTML = '';
+                const vis = o.series.filter(s => !off.has(s.id)), use = vis.length ? vis : o.series;
+                const xs = use.flatMap(s => s.pts.map(p => p[0])), ys = use.flatMap(s => s.pts.flatMap(p => p.length > 2 ? [p[2], p[3]] : [p[1]]));
+                const xd = o.xd || [Math.min(...xs), Math.max(...xs)];
+                let yd = o.yd; if (!yd) { const a = Math.min(...ys), b = Math.max(...ys), pd = (b - a) * .06; yd = [a - pd, b + pd]; }
+                const { X, Y } = axes(svg, W, H, m, xd, yd, o);
+                vis.forEach(s => {
+                    if (s.pts[0].length > 2) el('path', { d: 'M' + s.pts.map(p => X(p[0]) + ',' + Y(p[3])).join('L') + 'L' + s.pts.slice().reverse().map(p => X(p[0]) + ',' + Y(p[2])).join('L') + 'Z', fill: s.color, opacity: .2 }, svg);
+                    el('path', { d: 'M' + s.pts.map(p => X(p[0]) + ',' + Y(p[1])).join('L'), fill: 'none', stroke: s.color, 'stroke-width': 2, 'stroke-linejoin': 'round' }, svg);
+                    if (o.markers) s.pts.forEach(p => el('circle', { cx: X(p[0]), cy: Y(p[1]), r: 3, fill: s.color }, svg));
+                    if (o.labels && W > 560) s.pts.forEach(p => el('text', { x: X(p[0]), y: Y(p[1]) - 7, class: 'pl' }, svg, p[1]));
+                    if (o.ring) s.pts.filter(p => p[0] === o.ring).forEach(p => el('circle', { cx: X(p[0]), cy: Y(p[1]), r: 7, fill: 'none', stroke: s.color, 'stroke-width': 2 }, svg));
+                });
+                const g = el('line', { y1: m.t, y2: H - m.b, class: 'guide', style: 'display:none' }, svg);
+                const hit = el('rect', { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: 'transparent' }, svg);
+                hit.addEventListener('pointermove', ev => {
+                    if (!vis.length) return;
+                    const r = svg.getBoundingClientRect(), vx = (ev.clientX - r.left) / r.width * W, dx = xd[0] + (vx - m.l) / (W - m.l - m.r) * (xd[1] - xd[0]);
+                    const base = vis[0].pts, i = base.reduce((b, p, k) => Math.abs(p[0] - dx) < Math.abs(base[b][0] - dx) ? k : b, 0), x = base[i][0];
+                    g.setAttribute('x1', X(x)); g.setAttribute('x2', X(x)); g.style.display = '';
+                    const rows = vis.map(s => { const p = s.pts.reduce((b, q) => Math.abs(q[0] - x) < Math.abs(b[0] - x) ? q : b); return [s, p]; }).sort((a, b) => b[1][1] - a[1][1]);
+                    showTip(ev, `<b>${(o.xf || (d => d))(+x.toFixed(2))}</b><br>` + rows.map(([s, p]) => `${dot(s.color)}${vis.length > 1 ? s.label + ': ' : ''}${(o.tf || (d => d))(p[1])}${p.length > 2 ? ` [${(o.tf || (d => d))(p[2])}, ${(o.tf || (d => d))(p[3])}]` : ''}`).join('<br>'));
+                });
+                hit.addEventListener('pointerleave', () => { g.style.display = 'none'; hideTip(); });
+            }
+            draw();
+        });
+    }
+
+    // ---- 8: trajectories
+    lineChart(document.getElementById('c-traj'), {
+        H: 420, legend: true, markers: true, xd: [2000, 2025], xt: [2000, 2005, 2010, 2015, 2020, 2025], yd: [0, 0.33], yt: [0, 0.1, 0.2, 0.3], ylab: 'Prevalencia media (θ)', xlab: 'Año',
+        m: { l: 56 }, tf: pct, yf: v => v.toFixed(1),
+        series: TN.map(t => ({ id: t, label: `T${t}: ${TOPICS[t].name}`, color: TOPICS[t].color, pts: D.years.map((y, i) => [y, D.prevalence[t][i]]) }))
+    });
+
+    // ---- 10: spline curves
+    const cv = document.getElementById('c-curves');
+    TN.forEach(t => {
+        const box = html('div', '', cv, `<h4>T${t}: ${TOPICS[t].name}</h4>`), c = html('div', '', box);
+        lineChart(c, { H: Math.min(200, Math.max(170, c.clientWidth * .5)), m: { l: 38, r: 8, t: 6, b: 26 }, xd: [2000, 2025], xt: [2000, 2010, 2020], yf: v => +v.toFixed(2), tf: pct,
+            series: [{ id: t, label: TOPICS[t].name, color: '#8b1a1a', pts: D.curves[t] }] });
+    });
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

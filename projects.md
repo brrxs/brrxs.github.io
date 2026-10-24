@@ -14,6 +14,28 @@
 
 ## 2026
 
+<div class="publication-card" data-tags="r nlp">
+  <div class="publication-content">
+    <h3 class="publication-title">
+      <a href="projects/jne2026.html" class="publication-link">Chilean Lyrics &amp; Structural Topic Modeling</a>
+    </h3>
+    <div class="publication-venue">Conference Talk · Topic Modeling · JNE 2026</div>
+    <div class="publication-authors">
+      Thematic structure and evolution of Chilean music lyrics, 2000–2025. A Structural Topic Model
+      (K = 8) on 8,572 songs by 363 artists, with interactive versions of the talk's figures.
+    </div>
+    <div class="publication-tags">
+      <div class="project-themes">
+        <span class="tag tag-theme" data-tag="r">R</span>
+        <span class="tag tag-theme" data-tag="nlp">NLP</span>
+      </div>
+      <div class="project-links">
+        <a href="assets/JNE2026_slides.pdf" class="tag tag-notebook" target="_blank" rel="noopener">SLIDES</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="publication-card" data-tags="python nlp digital-trace">
   <div class="publication-content">
     <h3 class="publication-title">
