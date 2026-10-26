@@ -17,6 +17,7 @@
     <div class="publication-tags">
       <div class="project-links">
         <a href="https://www.observatoriodelcancer.cl/liderazgomujerycancer2026" class="tag tag-github" target="_blank" rel="noopener">STUDY</a>
+        <a href="https://e527c0af-0042-40ed-9f80-e48c144a7503.usrfiles.com/ugd/e527c0_c49681573d1d4215a023c58c4f16aa42.pdf" class="tag tag-github" target="_blank" rel="noopener">PDF</a>
         <a href="https://www.youtube.com/watch?v=87w-FH3Bhqk&t=4257s" class="tag tag-notebook" target="_blank" rel="noopener">VIDEO</a>
       </div>
     </div>
