@@ -30,7 +30,7 @@
         <span class="tag tag-theme" data-tag="nlp">NLP</span>
       </div>
       <div class="project-links">
-        <a href="assets/JNE2026_slides.pdf" class="tag tag-notebook" target="_blank" rel="noopener">SLIDES</a>
+        <a href="projects/jne2026.html" class="tag tag-notebook">SLIDES</a>
       </div>
     </div>
   </div>
