@@ -22,7 +22,7 @@
     <div class="publication-venue">Conference Talk · Topic Modeling · JNE 2026</div>
     <div class="publication-authors">
       Thematic structure and evolution of Chilean music lyrics, 2000–2025. A Structural Topic Model
-      (K = 8) on 8,572 songs by 363 artists, with interactive versions of the talk's figures.
+      (K = 8) on 8,572 songs by 363 artists.
     </div>
     <div class="publication-tags">
       <div class="project-themes">
